@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: #f2f2f2;
+    color: #24272a;
+    font: 13px Arial, Helvetica, sans-serif
+}
+
+.topbar {
+    height: 48px;
+    background: #17191c;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 max(calc((100% - 1120px)/2), 24px);
+    gap: 32px;
+    box-shadow: 0 1px 4px #0003
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap
+}
+
+.brand i {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    color: #26282b;
+    font-style: normal
+}
+
+.topbar nav {
+    height: 100%;
+    display: flex;
+    gap: 18px
+}
+
+.nav {
+    background: none;
+    color: #bfc1c4;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 0 4px;
+    font-size: 12px;
+    cursor: pointer
+}
+
+.nav.active {
+    border-color: #fff;
+    color: #fff
+}
+
+main {
+    max-width: 1120px;
+    min-height: calc(100vh - 48px);
+    margin: 28px auto;
+    padding: 0 20px
+}
+
+.panel {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px #0001
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px 13px
+}
+
+.heading h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 6px
+}
+
+.heading p {
+    color: #888;
+    margin: 0;
+    font-size: 12px
+}
+
+.btn {
+    border: 0;
+    border-radius: 3px;
+    padding: 9px 13px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+.dark {
+    background: #25272a;
+    color: #fff
+}
+
+.pale {
+    background: #eee;
+    color: #333;
+    border: 1px solid #ddd
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    padding: 2px 20px 13px
+}
+
+.filters input,
+.filters select {
+    height: 31px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0 9px;
+    font-size: 11px;
+    background: white
+}
+
+.filters input {
+    flex: 1
+}
+
+.filters select {
+    width: 155px
+}
+
+.table-wrap {
+    overflow: auto
+}
+
+table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse
+}
+
+th {
+    text-align: left;
+    background: #1d1f22;
+    color: #fff;
+    font-weight: 500;
+    font-size: 10px;
+    padding: 10px 11px
+}
+
+td {
+    font-size: 11px;
+    padding: 10px 11px;
+    border-bottom: 1px solid #e8e8e8
+}
+
+tbody tr:hover {
+    background: #fafafa
+}
+
+.badge {
+    padding: 3px 7px;
+    background: #e8eee9;
+    color: #385342;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: bold
+}
+
+.badge.maintenance {
+    background: #f3eadb;
+    color: #7c5c25
+}
+
+.row-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap
+}
+
+.action {
+    background: #27292c;
+    color: white;
+    border: 0;
+    border-radius: 2px;
+    padding: 5px 8px;
+    font-size: 10px;
+    cursor: pointer
+}
+
+.link {
+    border: 0;
+    background: none;
+    color: #666;
+    text-decoration: underline;
+    font-size: 10px;
+    cursor: pointer
+}
+
+.empty {
+    text-align: center;
+    color: #888;
+    padding: 28px
+}
+
+.foot {
+    padding: 10px 20px;
+    color: #888;
+    font-size: 10px;
+    border-top: 1px solid #e7e7e7
+}
+
+#notice {
+    padding: 11px 13px;
+    margin-bottom: 12px;
+    background: #edf5ed;
+    color: #355f35;
+    border: 1px solid #d4e8d4;
+    border-radius: 3px;
+    font-size: 12px
+}
+
+#notice.error {
+    background: #fff0ed;
+    color: #8c382d;
+    border-color: #f0d1ca
+}
+
+dialog {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    box-shadow: 0 12px 45px #0004;
+    width: min(460px, calc(100% - 24px))
+}
+
+dialog::backdrop {
+    background: #10131877
+}
+
+dialog form {
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+dialog header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px
+}
+
+dialog small {
+    font-size: 9px;
+    color: #777;
+    letter-spacing: 1px;
+    font-weight: bold
+}
+
+dialog h2 {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 5px 0
+}
+
+.x {
+    border: 0;
+    background: none;
+    color: #777;
+    font-size: 24px;
+    cursor: pointer;
+    height: 26px
+}
+
+dialog label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 11px;
+    color: #555;
+    font-weight: bold
+}
+
+dialog label span {
+    display: inline;
+    color: #888;
+    font-weight: normal
+}
+
+dialog input,
+dialog select,
+dialog textarea {
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    padding: 9px;
+    font: 12px Arial;
+    background: white
+}
+
+dialog input,
+dialog select {
+    height: 35px
+}
+
+.cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+dialog footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 4px
+}
+
+@media(max-width:700px) {
+    .topbar {
+        padding: 0 14px;
+        gap: 19px
+    }
+
+    main {
+        margin: 16px auto;
+        padding: 0 10px
+    }
+
+    .heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 13px
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        padding: 2px 12px 12px
+    }
+
+    .filters input {
+        flex-basis: 100%
+    }
+
+    .filters select {
+        flex: 1
+    }
+
+    .cols {
+        grid-template-columns: 1fr
+    }
+}

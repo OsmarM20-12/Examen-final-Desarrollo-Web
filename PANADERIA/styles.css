@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  background: #f7f4ec;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 22px;
+  text-align: center;
+  background: #e8dfcf;
+}
+
+header h1 {
+  margin: 0;
+  color: #72513b;
+  font-family: Georgia, serif;
+  font-size: 38px;
+}
+
+.lema {
+  margin: 6px 0 0;
+  color: #72513b;
+}
+
+nav {
+  padding: 12px;
+  text-align: center;
+  background: #72513b;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover { text-decoration: underline; }
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.bienvenida {
+  max-width: none;
+  padding: 55px 12%;
+  background: #eee4d2;
+}
+
+.bienvenida h2 {
+  margin: 0;
+  color: #72513b;
+  font-family: Georgia, serif;
+  font-size: 44px;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.bienvenida h2 span { color: #b16b42; }
+
+.productos {
+  display: flex;
+  gap: 15px;
+}
+
+article {
+  flex: 1;
+  padding: 12px;
+  background: white;
+  border: 1px solid #ddd5c8;
+}
+
+.imagen {
+  height: 120px;
+  display: grid;
+  place-items: center;
+  background: #eee4d2;
+}
+
+.imagen span { font-size: 48px; }
+.croissant { background: #f1e5c9; }
+.pastel { background: #29a356; }
+
+article h3 {
+  margin-bottom: 5px;
+  color: #72513b;
+  font-family: Georgia, serif;
+}
+
+article p { font-size: 14px; }
+.precio { font-weight: bold; }
+
+#nosotros {
+  max-width: none;
+  padding-left: 12%;
+  padding-right: 12%;
+  background: #e8dfcf;
+}
+
+#nosotros p:last-child { max-width: 600px; line-height: 1.6; }
+#contacto { text-align: center; }
+.telefono { color: #72513b; font-weight: bold; }
+
+footer {
+  padding: 10px;
+  text-align: center;
+  background: #72513b;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav a { display: inline-block; margin: 5px; }
+  .bienvenida { padding: 40px 8%; }
+  .bienvenida h2 { font-size: 36px; }
+  .productos { display: block; }
+  article { margin-bottom: 14px; }
+  #nosotros { padding: 30px 8%; }
+}

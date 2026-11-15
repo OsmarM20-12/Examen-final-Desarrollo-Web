@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Reservas de Equipos</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header class="topbar"><b class="brand"> Reservas de Equipos</b>
+        <nav><button class="nav active" data-view="equipos">Equipos</button><button class="nav"
+                data-view="reservas">Reservas</button></nav>
+    </header>
+    <main>
+        <div id="notice" hidden></div>
+        <section id="app"></section>
+    </main>
+    <dialog id="eqDialog">
+        <form id="eqForm">
+            <header>
+                <div><small>EQUIPOS</small>
+                    <h2 id="eqTitle">Nuevo equipo</h2>
+                </div><button type="button" class="x" data-close>×</button>
+            </header><input name="id" type="hidden"><label>Código<input name="codigo" maxlength="20"
+                    required></label><label>Nombre<input name="nombre" maxlength="100" required></label>
+            <div class="cols"><label>Tipo<select name="tipo">
+                        <option>Laptop</option>
+                        <option>Proyector</option>
+                        <option>Tablet</option>
+                        <option>Cámara</option>
+                        <option>Laboratorio</option>
+                    </select></label><label>Ubicación<input name="ubicacion" maxlength="100" required></label></div>
+            <label>Descripción<textarea name="descripcion" maxlength="255"
+                    rows="2"></textarea></label><label>Estado<select name="estado">
+                    <option>Disponible</option>
+                    <option>Mantenimiento</option>
+                </select></label>
+            <footer><button type="button" class="btn pale" data-close>Cancelar</button><button
+                    class="btn dark">Guardar</button></footer>
+        </form>
+    </dialog>
+    <dialog id="resDialog">
+        <form id="resForm">
+            <header>
+                <div><small>RESERVAS</small>
+                    <h2>Registrar reserva</h2>
+                </div><button type="button" class="x" data-close>×</button>
+            </header><label>Nombre completo<input name="nombre" maxlength="100" required
+                    placeholder="Ej. Pedro Gómez"></label><label>Carné<input name="carne" maxlength="20" required
+                    placeholder="Ej. 2023-01458"></label><label>Equipo<select name="equipo_id"
+                    required></select></label>
+            <div class="cols"><label>Fecha<input type="date" name="fecha" required></label><label>Hora inicio<input
+                        type="time" name="hora_inicio" required></label></div><label>Hora fin<input type="time"
+                    name="hora_fin" required></label><label>Motivo <span>(opcional)</span><textarea name="motivo"
+                    maxlength="255" rows="2"></textarea></label>
+            <footer><button type="button" class="btn pale" data-close>Cancelar</button><button
+                    class="btn dark">Guardar</button></footer>
+        </form>
+    </dialog>
+    <script type="module" src="/app.js"></script>
+</body>
+
+</html>
